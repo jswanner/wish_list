@@ -1,0 +1,23 @@
+# use glob syntax.
+syntax: glob
+
+*.log
+log/*
+tmp/*
+tmp/**/*
+db/*.sqlite3
+public/system
+*.DS_Store
+coverage/*
+*.swp
+*.swo
+hl7
+dlo
+receipt
+^./results
+results
+results_archive
+result_pdfs
+.idea
+/files
+coverage.data

@@ -7,4 +7,8 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :username,  :email
 
   attr_accessible :username, :email
+
+  def to_param
+    username
+  end
 end

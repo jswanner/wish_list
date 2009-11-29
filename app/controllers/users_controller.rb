@@ -13,7 +13,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.xml
   def show
-    @user = User.find(params[:id], :include => :wishes)
+    @user = User.find_by_username(params[:id], :include => :wishes)
 
     respond_to do |format|
       format.html # show.html.erb

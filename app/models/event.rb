@@ -5,4 +5,8 @@ class Event < ActiveRecord::Base
   validates_presence_of :title
 
   attr_accessible :title, :description
+
+  def to_param
+    "#{id}-#{title.parameterize}"
+  end
 end

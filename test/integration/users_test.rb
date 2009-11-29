@@ -57,6 +57,7 @@ class UsersTest < ActionController::IntegrationTest
       fill_in 'Description',  :with => 'new wish description'
       click_button 'Update Wish'
 
+      @wish.reload # needed because of change to permalink
       assert_equal user_wish_path(@user, @wish),  path
       assert_match /new wish title/,              response.body
       assert_match /new wish description/,        response.body

@@ -1,0 +1,6 @@
+%h1
+  Wish List
+  = link_to 'Add Wish', new_user_wish_path(@user)
+%ul
+  - @user.wishes.each do |wish|
+    %li[wish]= link_to wish.title, user_wish_path(@user, wish)

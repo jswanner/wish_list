@@ -1,8 +1,13 @@
 require 'test_helper'
 
 class WishTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
+  context 'The Wish class' do
+    setup do
+      @wish = Factory(:wish)
+    end
+    subject { @wish }
+
+    should_belong_to            :user
+    should_validate_presence_of :title
   end
 end

@@ -1,8 +1,12 @@
 require 'test_helper'
 
 class AttendingTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
+  context 'The Attending class' do
+    setup do
+      @attending = Factory(:attending)
+    end
+    subject { @attending  }
+
+    should_belong_to  :event
   end
 end

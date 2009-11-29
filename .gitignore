@@ -21,3 +21,4 @@ result_pdfs
 .idea
 /files
 coverage.data
+webrat-*.html

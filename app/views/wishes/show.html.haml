@@ -1,0 +1,9 @@
+%h1
+  = @wish.title
+  = link_to 'Edit Wish', edit_user_wish_path(@user, @wish)
+
+%h2 Description
+.wish-description= @wish.description
+
+%h2 Price
+.wish-price= @wish.price

@@ -1,0 +1,15 @@
+!!! XML
+!!! Strict
+%html(xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en")
+
+  %head
+    %title wish list
+    = stylesheet_link_tag 'formtastic', 'formtastic_changes'
+
+  %body
+    #header
+      - [:error, :warning, :notice].each do |key|
+        - if flash[key].present?
+          %div(class="flash flash_#{key}")= flash[key]
+    #content
+      = yield

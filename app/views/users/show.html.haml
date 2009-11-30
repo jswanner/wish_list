@@ -1,5 +1,5 @@
-%h1
-  Wish List
+- title("#{@user.username}'s Wish List")
+- content_for(:header) do
   = link_to 'Add Wish', new_user_wish_path(@user)
 %ul
   - @user.wishes.each do |wish|

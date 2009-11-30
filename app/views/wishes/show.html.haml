@@ -1,5 +1,5 @@
-%h1
-  = @wish.title
+- title(@wish.title)
+- content_for(:header) do
   = link_to 'Edit Wish', edit_user_wish_path(@user, @wish)
 
 %h2 Description

@@ -1,9 +1,11 @@
 - title(@wish.title)
-- content_for(:header) do
-  = link_to 'Edit Wish', edit_user_wish_path(@user, @wish)
 
 %h2 Description
 .wish-description= @wish.description
 
-%h2 Price
-.wish-price= @wish.price
+- if @wish.price.present?
+  %h2 Price
+  .wish-price= @wish.price
+
+.buttons
+  = link_to 'Edit Wish', edit_user_wish_path(@user, @wish), :class => 'button'

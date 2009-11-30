@@ -3,7 +3,7 @@
 %html(xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en")
   %head
     %title= [yield(:title), "List Wishes"].reject{ |t| t.nil? }.join(" - ")
-    = stylesheet_link_tag 'formtastic', 'formtastic_changes', 'applicaion'
+    = stylesheet_link_tag 'base', 'formtastic', 'formtastic_changes', 'application'
   %body
     #header
       %h1= yield(:title)

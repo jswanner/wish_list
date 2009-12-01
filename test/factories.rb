@@ -6,6 +6,8 @@ end
 Factory.define :wish do |wish|
   wish.sequence(:title) { |n| "wish title ##{n}"  }
   wish.association(:user)
+  wish.sequence(:price) { |n| d = n % 10; "#{d}#{d}.#{d}#{d}" }
+  wish.description { 'description of wish' }
 end
 
 Factory.define :event do |event|

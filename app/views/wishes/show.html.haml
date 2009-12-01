@@ -1,7 +1,8 @@
 - title(@wish.title)
 
-%h2 Description
-.wish-description= @wish.description
+- if @wish.description.present?
+  %h2 Description
+  .wish-description= @wish.description
 
 - if @wish.price.present?
   %h2 Price

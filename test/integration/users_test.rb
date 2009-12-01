@@ -1,6 +1,27 @@
 require 'test_helper'
 
 class UsersTest < ActionController::IntegrationTest
+  context 'Users index page' do
+    setup do
+      @user1 = Factory(:user)
+      @user2 = Factory(:user)
+    end
+
+    should 'show each user' do
+      visit users_path
+
+      assert_match /#{@user1.username}/, response.body
+      assert_match /#{@user2.username}/, response.body
+    end
+
+    should 'be able to visit user show page' do
+      visit users_path
+      click_link @user1.username
+
+      assert_equal user_path(@user1), path
+    end
+  end
+
   context 'A logged in user' do
     setup do
       @user = Factory(:user_with_wishes)
@@ -36,10 +57,10 @@ class UsersTest < ActionController::IntegrationTest
 
       click_link @wish.title
 
-      assert_equal user_wish_path(@user, @wish),        path
-      assert_match /#{@wish.title}/,                    response.body
-      assert_match /Description.*#{@wish.description}/, response.body
-      assert_match /Price.*#{@wish.price}/,             response.body
+      assert_equal user_wish_path(@user, @wish),  path
+      assert_match /#{@wish.title}/,              response.body
+      assert_match /#{@wish.description}/,        response.body
+      assert_match /#{@wish.price}/,              response.body
     end
 
     should 'be able to edit details of a wish' do

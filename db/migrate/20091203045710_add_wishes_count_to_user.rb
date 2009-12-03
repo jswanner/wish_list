@@ -1,6 +1,6 @@
 class AddWishesCountToUser < ActiveRecord::Migration
   def self.up
-    add_column :users, :wishes_count, :integer
+    add_column :users, :wishes_count, :integer, :default => 0
   end
 
   def self.down

@@ -22,3 +22,5 @@ result_pdfs
 /files
 coverage.data
 webrat-*.html
+Capfile
+config/deploy.rb

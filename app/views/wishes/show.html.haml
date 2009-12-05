@@ -2,7 +2,7 @@
 
 - if @wish.description.present?
   %h2 Description
-  %pre.wish-description= @wish.description
+  %pre.wish-description= replace_urls @wish.description
 
 - if @wish.price.present?
   %h2 Price

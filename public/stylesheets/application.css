@@ -1,29 +1,56 @@
 body {
-  font-size: 1em;
+  font-size: 1em; }
+
+#header {
+  background-color: #9f9;
+  border-bottom: 1px solid #9c9;
+  margin-bottom: 1em; }
+  #header span {
+    font-size: 3em;
+    padding: 0 .6em; }
+  #header a {
+    color: #363;
+    font-weight: bold;
+    text-decoration: none; }
+  #header a:hover {
+    color: #696; }
+  #header ul {
+    display: inline;
+    font-size: 1.4em;
+    list-style-type: none; }
+    #header ul li {
+      display: inline;
+      padding: 0 .5em; }
+
+#subheader {
   margin: 0 auto;
   width: 90%; }
 
-#header br {
-  clear: both; }
-
-#content ul {
-  list-style-type: none;
-  width: 80%; }
-  #content ul a.button {
-    float: none; }
-#content h2 {
-  color: #333;
-  margin: .5em 0 0 0; }
-#content .buttons {
-  margin: 1em 0 0 0; }
-#content pre.wish-description, #content .wish-price {
-  border-left: 3px solid #333;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 1em;
-  margin: 0 0 0 1em;
-  padding: 0 0 0 1em; }
-#content form {
-  width: 80%; }
-#content a span.meta {
-  color: #888;
-  font-size: .6em; }
+#content {
+  margin: 0 auto;
+  width: 90%; }
+  #content ul {
+    list-style-type: none;
+    width: 80%; }
+    #content ul a.button {
+      float: none; }
+  #content h2 {
+    color: #333;
+    margin: .5em 0 0 0; }
+  #content .buttons {
+    margin: 1em 0 0 0; }
+  #content pre.wish-description, #content .wish-price {
+    border-left: 3px solid #333;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    margin: 0 0 0 1em;
+    padding: 0 0 0 1em; }
+    #content pre.wish-description a, #content .wish-price a {
+      color: #900; }
+    #content pre.wish-description a:hover, #content .wish-price a:hover {
+      color: #f03; }
+  #content form {
+    width: 80%; }
+  #content a span.meta {
+    color: #888;
+    font-size: .6em; }

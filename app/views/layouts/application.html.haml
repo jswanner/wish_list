@@ -6,8 +6,11 @@
     = stylesheet_link_tag 'base', 'formtastic', 'formtastic_changes', 'application'
   %body
     #header
+      %span= link_to "List Wishes", root_path
+      %ul= yield(:header_menu)
+    #subheader
       %h1= yield(:title)
-      = yield(:header)
+      = yield(:subheader)
       - [:error, :warning, :notice].each do |key|
         - if flash[key].present?
           %div(class="flash flash_#{key}")= flash[key]

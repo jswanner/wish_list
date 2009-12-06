@@ -4,9 +4,9 @@ module ApplicationHelper
     content_for(:title) { title }
   end
 
-  def header_menu(item)
+  def header_menu(text, path)
     content_for(:header_menu) do
-      content_tag :li, item
+      content_tag :li, link_to(sanitize(text), path)
     end
   end
 end

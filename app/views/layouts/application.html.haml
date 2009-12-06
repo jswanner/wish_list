@@ -2,14 +2,14 @@
 !!! Strict
 %html(xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en")
   %head
-    %title= [yield(:title), "List Wishes"].reject{ |t| t.nil? }.join(" - ")
+    %title&= [yield(:title), "List Wishes"].reject{ |t| t.nil? }.join(" - ")
     = stylesheet_link_tag 'base', 'formtastic', 'formtastic_changes', 'application'
   %body
     #header
       %span= link_to "List Wishes", root_path
       %ul= yield(:header_menu)
     #subheader
-      %h1= yield(:title)
+      %h1&= yield(:title)
       = yield(:subheader)
       - [:error, :warning, :notice].each do |key|
         - if flash[key].present?

@@ -51,6 +51,6 @@ body {
       color: #f03; }
   #content form {
     width: 80%; }
-  #content a span.meta {
+  #content ul a span.meta {
     color: #888;
     font-size: .6em; }

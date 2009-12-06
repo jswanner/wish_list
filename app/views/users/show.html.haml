@@ -1,5 +1,5 @@
 - title("#{@user.username}'s Wish List")
 %ul
   - @user.wishes.each do |wish|
-    %li[wish]= link_to wish.title, user_wish_path(@user, wish), :class => 'button'
+    %li[wish]= link_to html_escape(wish.title), user_wish_path(@user, wish), :class => 'button'
 = link_to 'Add Wish', new_user_wish_path(@user), :class => 'button positive'

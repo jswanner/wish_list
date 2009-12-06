@@ -1,5 +1,5 @@
 - title("Edit: #{@wish.title}")
-- header_menu link_to @user.username, user_path(@user)
-- header_menu link_to @wish.title, user_wish_path(@user, @wish)
+- header_menu @user.username, user_path(@user)
+- header_menu @wish.title, user_wish_path(@user, @wish)
 
 = render :partial => 'form'

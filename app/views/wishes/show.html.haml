@@ -1,5 +1,5 @@
 - title @wish.title 
-- header_menu link_to(@user.username, user_path(@user))
+- header_menu @user.username, user_path(@user)
 
 - if @wish.description.present?
   %h2 Description
@@ -7,7 +7,8 @@
 
 - if @wish.price.present?
   %h2 Price
-  .wish-price= @wish.price
+  .wish-price&= @wish.price
 
 .buttons
   = link_to 'Edit Wish', edit_user_wish_path(@user, @wish), :class => 'button'
+  = button_to 'Remove Wish', user_wish_path(@user, @wish), :method => :delete, :class => 'button negative', :confirm => "Are you sure you want to delete: #{sanitize(@wish.title)}"

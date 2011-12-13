@@ -19,9 +19,9 @@ Rails::Initializer.run do |config|
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
-  config.gem 'haml'
-  config.gem 'formtastic'
-  config.gem 'validation_reflection'
+  config.gem 'haml', :version => '2.2.20'
+  config.gem 'formtastic', :version => '0.9.7'
+  config.gem 'validation_reflection', :version => "0.3.8"
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named

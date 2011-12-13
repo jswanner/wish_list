@@ -24,3 +24,4 @@ coverage.data
 webrat-*.html
 Capfile
 config/deploy.rb
+.rvmrc

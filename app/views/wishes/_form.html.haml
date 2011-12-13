@@ -1,4 +1,4 @@
 - semantic_form_for [@user, @wish] do |form|
   = form.inputs :title, :description, :price
-  - form.buttons do 
-    = form.commit_button :button_html => { :class => "button positive" }
+  - form.buttons do
+    = form.commit_button :label => 'Create Wish', :button_html => { :class => "button positive" }

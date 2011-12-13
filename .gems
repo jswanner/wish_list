@@ -1,0 +1,5 @@
+rails --version 2.3.5
+haml --version 2.2.20
+formtastic --version 0.9.7
+validation_reflection --version 0.3.8
+pg
